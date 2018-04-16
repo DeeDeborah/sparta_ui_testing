@@ -36,6 +36,16 @@ class SeleniumQaToolForm
     element = @chrome_driver.find_element(:id, "sex-1").click
     sleep 4
   end
+
+  def select_years_of_exp
+    radio_but = @chrome_driver.find_element(:id, "exp-1").click
+    sleep 5
+  end
+
+  def input_date(text)
+    @chrome_driver.find_element(:id, "datepicker").send_keys(text)
+    sleep 4
+  end
 end
 
 form = SeleniumQaToolForm.new
@@ -45,3 +55,5 @@ form.get_first_name_text
 form.input_lastname_field("Ansah")
 form.get_last_name_text
 form.input_choice_of_sex
+form.select_years_of_exp
+form.input_date("12-03-18")
