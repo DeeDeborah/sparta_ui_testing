@@ -9,6 +9,7 @@ class Under13Reg
 
   def click_under13_button
     click_link('Under 13')
+    sleep 5
   end
 
 end
